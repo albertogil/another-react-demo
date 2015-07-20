@@ -14,16 +14,23 @@ In this repo, you can see an example of an isomorphic application using:
 
 ### The Setup
 
-First, I did a npm init and decided the technologies I was going to use. 
-[Webpack](http://webpack.github.io/) for module bundling and [Browserify](http://browserify.org/) (also Express and React).
-Since I'm sharing some files for running in browsers and Node, Browserify fits perfectly in this project.
+[Webpack](http://webpack.github.io/) for module bundling
+[Browserify](http://browserify.org/) Since I'm sharing some files for running in browsers and Node, Browserify fits perfectly in this project.
+Express
+React
+jsx-loader to compile the React components.
+[Nodemon](https://github.com/remy/nodemon) to reload the app when it changes. In the Nodemon configuration, a watch to shared and server is added and when something changes in those files, webpack also runs again.
 
 webpack.config is the file used to setup webpack. Webpack takes the main.js file in the client folder and dig for all the dependencies and creates a single file.
-I also needed to add a jsx-loader to compile the React components.
 
-For Node, I'm using [Nodemon](https://github.com/remy/nodemon) to reload the app when it changes. In the Nodemon configuration, a watch to shared and server is added and when something changes in those files, webpack also runs again.
+### Run App
 
-There is also a script that starts the app. It's binded to the npm run dev command. 
+```
+git clone https://github.com/albertogil/another-react-demo.git
+cd another-react-demo
+npm install
+npm run dev
+```
 
 ### The Structure
 
